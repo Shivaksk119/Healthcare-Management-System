@@ -1,0 +1,28 @@
+.user-list {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+  }
+  
+  .user-list h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #007bff;
+  }
+  
+  .user-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .user-list ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .user-list ul li:last-child {
+    border-bottom: none;
+  }

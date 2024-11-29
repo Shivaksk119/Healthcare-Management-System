@@ -1,42 +1,143 @@
-#root {
-  max-width: 1280px;
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* Form Styles */
+form {
+  background-color: white;
   padding: 2rem;
-  text-align: center;
+  margin: 2rem auto;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+form div {
+  margin-bottom: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+form input,
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
-.card {
-  padding: 2em;
+form input:focus,
+form select:focus {
+  border-color: #007bff;
 }
 
-.read-the-docs {
-  color: #888;
+form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.dashboard h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* User List Styles */
+.user-list {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.user-list h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.user-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.user-list ul li:last-child {
+  border-bottom: none;
 }

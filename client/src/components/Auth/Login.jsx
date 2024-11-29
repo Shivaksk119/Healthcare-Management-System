@@ -1,6 +1,7 @@
-import React, { useState } from 'react'; // Import React and useState hook
-import { login } from '../../services/api'; // Import the login function from the API service
-import { useHistory } from 'react-router-dom'; // Import useHistory hook from react-router-dom
+import React, { useState } from 'react';
+import { login } from '../../services/api';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import './Auth.css'; // Import Auth-specific styles
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -8,21 +9,19 @@ const Login = () => {
         password: ''
     });
 
-    const history = useHistory(); // Get the history object
+    const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
-    // Handle input changes
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const data = await login(formData); // Call the login function with form data
-            localStorage.setItem('token', data.token); // Store the token in local storage
+            const data = await login(formData);
+            localStorage.setItem('token', data.token);
             alert('Login successful');
-            history.push('/dashboard'); // Redirect to the dashboard
+            navigate('/dashboard'); // Use navigate instead of history.push
         } catch (err) {
             console.error(err);
             alert('Error logging in');
